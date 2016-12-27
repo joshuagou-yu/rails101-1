@@ -3,7 +3,7 @@
 
   <hr>
   <%= form_for @group do |f| %>
-  <%= if @group.errors.any? %>
+  <% if @group.errors.any? %>
   <ul>
     <% @group.errors.full_messages.each do |msg| %>
       <li><%= msg %></li>
@@ -17,7 +17,7 @@
   叙述
   <br>
   <%= f.text_field :description %>
-  <br>
+  </br>
 
   <%= f.submit "submit", :disable_with => 'submiting...' %>
   <% end %>
